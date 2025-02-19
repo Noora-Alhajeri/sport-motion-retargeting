@@ -1,0 +1,47 @@
+<mujoco model="h1_scene">
+    <include file="h1.xml" />
+
+    <!-- Setting the statistic for the environment -->
+    <statistic center="0 0 1" extent="1.8"/>
+
+    <!-- Visual Settings -->
+    <visual>
+        <!-- Enhanced Lighting -->
+        <headlight diffuse="1 1 1" ambient="0.5 0.5 0.5" specular="0.3 0.3 0.3"/>
+        <rgba haze="0.1 0.1 0.15 1"/>
+        <global azimuth="180" elevation="-30"/>
+    </visual>
+
+    <!-- Asset Section -->
+    <asset>
+        <!-- Skybox Texture -->
+        <texture type="skybox" builtin="gradient" rgb1="0.2 0.2 0.3" rgb2="0 0 0" width="512" height="3072"/>
+
+        <!-- Improved Sports Floor Texture -->
+        <texture name="sports_texture" type="2d" builtin="checker" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5"
+            mark="edge" markrgb="1 1 1" width="300" height="300"/>
+        <material name="sports_material" texture="sports_texture" texuniform="true" texrepeat="10 10"
+            reflectance="0.05" shininess="0.3"/>
+
+        <!-- Ground Plane Texture -->
+        <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.4 0.2" rgb2="0.1 0.2 0.1"
+            markrgb="0.8 0.8 0.8" width="300" height="300"/>
+        <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+    </asset>
+
+    <!-- World Setup -->
+    <worldbody>
+        <!-- Enhanced Lighting for the Scene -->
+        <light pos="2 2 5" dir="0 0 -1" directional="true" diffuse="1 1 1" specular="0.8 0.8 0.8"/>
+
+        <!-- Sports Arena Floor -->
+        <geom name="floor" type="plane" size="5 5 0.1" pos="0 0 0" material="sports_material"/>
+        <!-- Improved Camera Setup -->
+        <camera name="main_camera" pos="4 3 2" quat="0.707 0 0.707 0"/>
+    </worldbody>
+
+    <!-- Keyframe to adjust the initial position of the robot -->
+    <keyframe>
+        <key name="home" qpos="0 0 0.98 1 0 0 0 0 0 -0.4 0.8 -0.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+    </keyframe>
+</mujoco>
