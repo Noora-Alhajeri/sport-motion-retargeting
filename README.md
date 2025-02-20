@@ -9,6 +9,8 @@ This project focuses on motion retargeting using **MuJoCo** and **AMASS motion c
 ## Motion Capture Data
 💥 **IMPORTANT: Please download the motion capture data from this link**:
 [Download Data.zip from OneDrive](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/noora_alhajeri_mbzuai_ac_ae1/EThi8eRnjjJMv9jtxGnR5VwB27gOKf1keogjP0VDRkN9iA?e=iJF5h8)
+If you face any issues while downloading data, here is another link:
+[Download Data](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/noora_alhajeri_mbzuai_ac_ae1/Eq8gFrv4Z29PoqTKXz3tt_kBkPpu_OtsQWDqMtc6bxAB5A?e=KggTzj)
 
 NOTE: 
 **The motion data used in this project comes from the [AMASS dataset](https://amass.is.tue.mpg.de/)**.  
